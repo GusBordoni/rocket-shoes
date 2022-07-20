@@ -1,0 +1,59 @@
+@media only screen and (min-width: 1600px) {
+    main > img {
+        width: 20%;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    body {
+        background: linear-gradient(90deg, var(--background) 40%, var(--main-background) 40%);
+        grid-template-columns: 4fr 6fr;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    h1 {
+        font-size: 2.5em;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    body {
+        background: var(--background);
+        display: flex;
+        flex-direction: column;
+        height: unset;
+    }
+    nav {
+        height: 100px;
+    }
+    nav > img {
+        place-self: center;
+    }
+    .navbar-links {
+        display: none;
+    }
+    main {
+        background-color: var(--main-background);
+    }
+    footer {
+        height: 50px;
+        position: fixed;
+        bottom: 0;
+    }
+    footer > div {
+        flex: 2;
+    }
+    footer > div:first-child {
+        display: none;
+    }
+    footer > div:last-child {
+        font-size: .75em;
+    }
+    footer > div > span {
+        display: none;
+    }
+    footer > div > img {
+        display: block;
+    }
+}
