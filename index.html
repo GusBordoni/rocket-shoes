@@ -15,8 +15,13 @@
 <body>
     <header>
         <nav>
-            <img src="assets/logo.svg" alt="">
-            <div class="navbar-links">
+            <a href="#"><img src="assets/logo.svg" alt=""></a>
+            <div class="menu-hamburger" id="menu-hamburger">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+            <div class="navbar-links" id="navbar-links">
                 <ul>
                     <li>HOMEM</li>
                     <li>MULHER</li>
@@ -25,7 +30,7 @@
                 </ul>
             </div>
             <input type="search" id="search-bar" placeholder="Pesquisar">
-            <img src="assets/icon-bag.svg" alt="">
+            <a href="#"><img src="assets/icon-bag.svg" alt=""></a>
         </nav>
     </header>
     <aside>
@@ -37,12 +42,14 @@
         </div>
     </aside>
     <main>
-        <div>
-            <img src="assets/tenis-1-ampliado.png" alt="">
+        <div class="main-container">
+            <div>
+                <img src="assets/tenis-1-ampliado.png" alt="">
+            </div>
+            <img src="assets/tenis-1-galeria.png" alt="">
+            <img src="assets/tenis-2-galeria.png" alt="">
+            <img src="assets/tenis-3-galeria.png" alt="">
         </div>
-        <img src="assets/tenis-1-galeria.png" alt="">
-        <img src="assets/tenis-2-galeria.png" alt="">
-        <img src="assets/tenis-3-galeria.png" alt="">
     </main>
     <footer>
         <div class="video-wrapper">
@@ -54,7 +61,8 @@
         <div><span>INSTAGRAM</span><img src="assets/sm-instagram.svg" alt=""></div>
         <div><span>YOUTUBE</span><img src="assets/sm-youtube.svg" alt=""></div>
         <div><span>TWITTER</span><img src="assets/sm-twitter.svg" alt=""></div>
-        <div>EXPLORE MAIS -></div>
+        <div>EXPLORE MAIS &nbsp;&nbsp;<img src="assets/icon-arrow.svg" alt="" class="explore"></div>
     </footer>
+<script src="menu.js"></script>
 </body>
 </html>

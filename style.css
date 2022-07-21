@@ -55,28 +55,36 @@ aside {
 main {
     grid-area: main;
     display: flex;
-    align-items: flex-end;
-    justify-content: space-evenly;
-    padding-bottom: 25px;
-    flex-wrap:wrap;
+    align-items: stretch;
+    justify-content: center;
 }
 
-main > div {
+.main-container {
+    width: 100%;
+    padding-bottom: 25px;
+    flex-wrap:wrap;
+    display: flex;
+    align-items:flex-end;
+    justify-content: space-evenly;
+}
+
+.main-container > div {
     display: flex;
     width: 100%;
     align-content: center;
     justify-content: center;
+    max-height: 50vh;
 }
 
-main > div > img {
-    max-width: 90%;
+.main-container > div > img {
+    max-width: 50%;
 }
 
-main > img {
-    width: 28%;
+.main-container > img {
+    width: 25%;
 }
 
-main > img:nth-child(3) {
+.main-container > img:nth-child(3) {
     border-bottom: 5px solid var(--button);
     height: auto;
     box-sizing: content-box;
@@ -103,6 +111,14 @@ footer > div {
     font-weight: 700;
 }
 
+footer > div:hover {
+    color: var(--button);
+}
+
+footer > div:last-child:hover {
+    color: white;
+}
+
 footer > div:first-child {
     flex: 6;
     background-color: var(--footer);
@@ -111,7 +127,6 @@ footer > div:first-child {
 
 .video-wrapper {
     width: 100%;
-    border: 1px solid red;
     overflow: hidden;
 }
 
@@ -120,7 +135,6 @@ footer > div:first-child {
     max-width: 100%;
     height: 0;
     padding-bottom: 120px;
-    border: 1px solid blue;
     position: relative;
 }
 
@@ -146,6 +160,10 @@ footer > div > img {
     place-self: center;
 }
 
+.explore {
+    display: unset;
+}
+
 footer > div > img:hover {
     filter: saturate(1.75);
 }
@@ -156,6 +174,43 @@ nav {
     justify-content: space-around;
     width: 100%;
     max-width: 1200px;
+}
+
+nav > a {
+    display: flex;
+    align-items: center;
+}
+
+nav > a:nth-child(5) > img:hover {
+    filter: invert(14%) sepia(91%) saturate(7006%) hue-rotate(6deg) brightness(95%) contrast(120%);
+}
+
+.menu-hamburger {
+    display: none;
+    cursor: pointer;
+    place-self: center;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 25px;
+    height: 4px;
+    background-color: var(--button);
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-6px, 6px);
+    transform: rotate(-45deg) translate(-6px, 6px);
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-5px, -5px);
+    transform: rotate(45deg) translate(-5px, -5px);
 }
 
 .navbar-links > ul {
@@ -170,6 +225,13 @@ nav {
     font-weight: 700;
     font-size: 1.25em;
     cursor: pointer;
+    color: var(--text);
+    transition: color .2s;
+}
+
+.navbar-links > ul > li:hover {
+    color: var(--button);
+    transition: color .2s;
 }
 
 #search-bar {
@@ -180,7 +242,14 @@ nav {
     padding-left: 30px;
     background-size: 20px;
     font: inherit;
+    width: 200px;
 }
+
+#search-bar:focus-within {
+    border: none;
+    outline: 1px solid var(--button);
+}
+
 
 h1 {
     font-size: 3em;
@@ -198,7 +267,7 @@ h1 {
 .buy-btn {
     color: var(--background);
     background-color: var(--button);
-    padding: 25px 25px;
+    padding: 25px 5%;
     width: 80%;
     border: none;
     font-weight: 700;
